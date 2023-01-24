@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  
+  server:
+    build: .
+    command: "npm run start"
+
+    environment:
+      PORT: 8000
+    
+    volumes:
+      - .:/node_complete
+    ports:
+      - "8000:8000"
+ # Port required for debugging with node
+      - "9229:9229"
+   
+volumes:
+  db: {}
+ 
